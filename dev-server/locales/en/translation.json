@@ -1,0 +1,11 @@
+{
+  "__langauge_detected": "en",
+  "hello_world": "hello world",
+  "_is_already_existed": " is alreay existed!",
+  "Username_is_required!": "Username is required!",
+  "Password_is_required!": "Password is required!",
+  "First_name_is_required!": "First name is required!",
+  "Last_name_is_required!": "Last name is required!",
+  "Some_rooms_are_still_using_this_room_type!": "Some rooms are still using this room type!",
+  "Some_rooms_are_still_using_this_floor!": "Some rooms are still using this floor!"
+}
