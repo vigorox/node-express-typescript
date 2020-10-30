@@ -3,15 +3,11 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: [
-    'plugin:vue/essential',
-    'eslint:recommended',
-    '@vue/typescript/recommended',
-    '@vue/prettier',
-    '@vue/prettier/@typescript-eslint',
-  ],
+  parser: '@typescript-eslint/parser',
+  extends: ['plugin:@typescript-eslint/recommended'],
   parserOptions: {
     ecmaVersion: 2020,
+    sourceType: 'module',
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -27,6 +23,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/ban-ts-ignore': 'off',
-    '@typescript-eslint/no-use-before-define': 'off'
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 };

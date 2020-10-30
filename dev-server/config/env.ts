@@ -42,5 +42,5 @@ function setProdEnv(app: any) {
   process.env.DB_URL = 'mongodb://localhost:27017/template-db';
   process.env.TOKEN_SECRET = '27946982a9a4408996607fe95a62ffff';
   app.use(bodyParser.json());
-  app.use(express.static( path.join(__dirname , '../vue-dist') ));
+  app.use(express.static(path.join(__dirname, '../vue-dist')));
 }

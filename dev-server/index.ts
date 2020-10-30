@@ -15,6 +15,7 @@ import { connectToDB } from './config/db';
 import * as dbApp from './db.app';
 
 const tryToConnectToDb = async () => {
+  console.log('Trying to connect to DB...');
   return new Promise(async (resolve, reject) => {
     try {
       await connectToDB();
@@ -77,7 +78,7 @@ const tryToConnectToDb = async () => {
   //   );
   // });
 
-  let server = require('http').createServer();
+  const server = require('http').createServer();
   wss = new WebSocket.Server({
     server: server,
   });
@@ -88,7 +89,7 @@ const tryToConnectToDb = async () => {
     });
     ws.send('send by wss server!');
   });
-  let port = process.env.NODE_ENV === 'production' ? 8088 : 3000;
+  const port = process.env.NODE_ENV === 'production' ? 8088 : 3000;
   server.listen(port, () => {
     console.log(`http/ws server listening on ${port}`);
   });
